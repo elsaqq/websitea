@@ -7,40 +7,100 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Hero Section -->
     <div class="hero">
-        <nav>
+        <nav>1
             <img src="images/logoe.png" class="logo" alt="Logo">
             <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
             </ul>
         </nav>
-        
-        <div class="das">
-            <a href="images/Elsa_Luis_CV.docx">DOWNLOAD CV</a>
-            
-        </div>
 
-      
+        <!-- CV Download Section -->
+    <div class="das">
+        <a href="images/Elsa_Luis_CV.docx" class="download-btn">DOWNLOAD CV</a>
+    </div>
 
-        <div class="images2">
-            <div class="overlay-text">
-                <p>Hi, I am Elsa and I have recently graduated. Find more about me on the ABOUT page.</p>
+     <!-- About Section -->
+<div id="about" class="about-section">
+    <h1>About Me</h1>
+    <p>With a strong foundation in computer science and a passion for technology, I am a dedicated programmer currently pursuing a master's degree in artificial intelligence. My academic journey has equipped me with a deep understanding of both theoretical and practical aspects of software development, and I am constantly expanding my knowledge in cutting-edge AI technologies.</p>
+    <p>I have a keen interest in developing innovative solutions that merge creativity with technical expertise, and I am eager to contribute to projects that have a meaningful impact. My approach is centered around problem-solving, continuous learning, and collaboration, as I strive to stay at the forefront of the rapidly evolving tech landscape.</p>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="/images/elsa.png" alt="Elsa" style="width:30%">
+                <div class="container">
+                    <h2>Elsa Luis</h2>
+                    <p class="title">Computer Programmer & AI Enthusiast</p>
+                    <p>Email: elsamonica6@hotmail.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
             </div>
-            <img src="images/wallp.jpg" class="grades" alt="grades">
         </div>
+    </div>
+</div>
 
-        
 
         
     </div>
 
+    
 
+
+    <!-- Portfolio Section -->
+    <div id="portfolio" class="portfolio-section">
+        <h1>My Projects</h1>
+        <div class="portfolio-grid">
+            <!-- Project 1 -->
+            <div class="portfolio-item">
+                <div class="video-container">
+                    <video controls>
+                        <source src="images/memory game.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="content">
+                    <h3>Memory game</h3>
+                    <p>Designed using CSS, HTML, and JavaScript</p>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="portfolio-item">
+                <img src="images/project2.jpg" alt="Project 2">
+                <div class="content">
+                    <h3>Project Title</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+
+            <!-- Additional Projects -->
+            <div class="portfolio-item">
+                <img src="images/project2.jpg" alt="Project 2">
+                <div class="content">
+                    <h3>Project Title</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <img src="images/project2.jpg" alt="Project 2">
+                <div class="content">
+                    <h3>Project Title</h3>
+                    <p>Description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <h3>Contact Me</h3>
-            <p>Feel free to reach out through my social media channel</p>
+            <p>Feel free to reach out through my social media channels</p>
             <ul class="socials">
                 <li><a href="#"><img src="images/174857.png" alt="LinkedIn"></a></li>
                 <li><a href="#"><img src="images/GitHub-Mark-ea2971cee799.png" alt="GitHub"></a></li>
@@ -50,7 +110,5 @@
             <p>&copy; 2024 Elsa Luis | All Rights Reserved</p>
         </div>
     </footer>
-
-
 </body>
 </html>

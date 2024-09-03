@@ -12,13 +12,41 @@ html {
 
 .hero {
     position: relative;
-    max-width: 100%; 
-    height: 100vh; 
+    width: 100%; 
+    min-height: 100vh; /* Allow the hero section to grow if content overflows */
     background: linear-gradient(to bottom right, #eeeff023, #3c4299d5);
-    overflow: hidden;
     margin: 0 auto;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(4, 141, 233, 0.1);
+}
+
+
+.das {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Add some spacing around the section */
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 20px 28px;
+    background-color: #0eabd6; /* Green background color */
+    color: #ffffff; /* White text color */
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.download-btn:active {
+    transform: translateY(1px); /* Pressed effect */
 }
 
 nav {
@@ -114,7 +142,6 @@ nav ul li a {
     width: 100%;
     padding-top: 100%; /* This creates the square aspect ratio */
     position: relative;
-    overflow: hidden;
 }
 
 .video-container video {
@@ -166,7 +193,7 @@ footer {
     transition: transform 0.3s ease;
 }
 
-.socials a img:hover {
+socials a img:hover {
     transform: scale(1.2);
 }
 
@@ -179,4 +206,36 @@ footer {
 
 .footer-bottom p {
     margin: 0;
+}
+
+
+.about-section {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #3c4299;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-section .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 400px;
 }
