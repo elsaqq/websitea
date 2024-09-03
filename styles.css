@@ -1,0 +1,401 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.hero {
+    position: relative;
+    max-width: 100%; 
+    height: 100vh; 
+    background: linear-gradient(to bottom right, #eeeff023, #3c4299d5);
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(4, 141, 233, 0.1);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; 
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 10px 15px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(2, 27, 110, 0.308);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(13, 128, 223, 0.89);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .logo {
+    width: 100px; 
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px; 
+    flex-wrap: wrap; 
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.das {
+    margin: 20px 10px; 
+    color: #333;
+    font-size: 16px; 
+    line-height: 1.4;
+}
+
+.das h1 {
+    font-size: 32px; /* Adjust heading size for smaller screens */
+    color: #111;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.das a {
+    background: #333;
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+
+
+
+.images2:hover {
+    transform: scale(1.1);
+}
+
+.overlay-text {
+    position: absolute;
+    left:30%; 
+    right: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 16px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.images2:hover .overlay-text {
+    opacity: 1;
+}
+
+
+.images2 {
+    position: absolute;
+    top: 40%; 
+    left: 0%;
+    right: 0%;
+    
+}
+
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        padding: 10px;
+    }
+
+    .nav {
+        flex-direction: column; 
+    }
+
+  
+   
+
+
+    .das {
+        margin: 20px;
+        font-size: 14px; /* Further reduce font size */
+    }
+
+    .das h1 {
+        font-size: 28px; /* Reduce heading size */
+    }
+
+    .das a {
+        padding: 8px 16px; /* Reduce padding on buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav ul {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .das {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .das h1 {
+        font-size: 24px; /* Further reduce heading size */
+    }
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    margin-bottom: 20px;
+}
+
+.footer-content h3 {
+    margin: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.socials a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.socials a img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    background-color: #8a80c4;
+    padding: 10px 0;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+
+.about-section {
+    text-align: center;
+    padding: 5px 20px;
+    background-color: #f4f4f4;
+}
+
+.about-section h1 {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.about-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Card Styles */
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.column {
+    flex: 33.33%;
+    max-width: 33.33%;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.card img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container h2 {
+    font-size: 2px;
+    margin-bottom: 10px;
+}
+
+.container .title {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 16px;
+    color: #777;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #333;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+
+.grades {
+    position: absolute;
+    top: 86%; 
+    right: inherit;
+    left: 35%;
+align-self: center;
+}
+
+
+.grades .logo{
+    width: 60%;
+    align-self: center;
+
+
+}
+
+
+.grades1 {
+    position: absolute;
+
+    top: 70%; 
+    left: 30%;
+    left: 30%;
+}
+
+.grades1 .logo1{
+    width: 100%;
+    
+
+}
+
+
+.portfolio-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #7b75c9;
+}
+
+.portfolio-section h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    background-color: #fcfcff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item .content {
+    padding: 20px;
+}
+
+.portfolio-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.portfolio-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .portfolio-item h3 {
+        font-size: 20px;
+    }
+
+    .portfolio-item p {
+        font-size: 14px;
+    }
+}
