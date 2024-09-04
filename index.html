@@ -145,9 +145,20 @@
 
         /* Video Container Styles */
         .video-container {
-            width: 100%;
+            width: 90%;
             padding-top: 100%; /* This creates the square aspect ratio */
             position: relative;
+        
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer; /* Cursor changes to pointer indicating it's clickable */
         }
 
         .video-container video {
@@ -309,10 +320,15 @@
             
             <!-- Project 2 -->
             <div class="portfolio-item">
-                <img src="images/project2.jpg" alt="Project 2">
+                <div class="video-container">
+                    <video controls>
+                        <source src="images/op.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <div class="content">
-                    <h3>Project Title</h3>
-                    <p>Description</p>
+                    <h3>Mobile Fitness app</h3>
+                    <p>Designed using Kotlin</p>
                 </div>
             </div>
 
