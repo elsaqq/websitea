@@ -1,352 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <style>
-        /* General and Hero Section Styles */
-        html {
-            scroll-behavior: smooth;
-        }
+  <title>Julie Creative Portfolio</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="css/vendor.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .hero {
-            position: relative;
-            width: 100%; 
-            min-height: 100vh; 
-            background: linear-gradient(to bottom right, #eeeff023, #666ee4d5);
-            margin: 0 auto;
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(4, 141, 233, 0.1);
-        }
-
-        .das {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0; /* Add some spacing around the section */
-        }
-
-        .download-btn {
-            display: inline-block;
-            padding: 40px 35px;
-            background-color: #0eabd6; /* Green background color */
-            color: #ffffff; /* White text color */
-            font-size: 16px;
-            font-weight: bold;
-            text-decoration: none; /* Remove underline */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #19b8bb; /* Slightly darker green on hover */
-            transform: translateY(-2px); /* Slight lift on hover */
-        }
-
-        .download-btn:active {
-            transform: translateY(1px); /* Pressed effect */
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap; 
-            max-width: 100%;
-            margin: 10px auto;
-            padding: 10px 15px;
-            align-items: center;
-            justify-content: space-between;
-            background-color: rgba(2, 27, 110, 0.308);
-            backdrop-filter: blur(5px);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(1, 62, 111, 0.968);
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        nav .logo {
-            width: 100px; 
-            left: auto;
-            right: auto;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 20px; 
-            flex-wrap: wrap; 
-        }
-
-        nav ul li {
-            list-style: none;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            padding: 8px 12px; 
-            border-radius: 5px;
-            transition: color 0.3s ease, background-color 0.3s ease;
-        }
-
-        /* Portfolio Section Styles */
-        .portfolio-section {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #7b75c9;
-        }
-
-        .portfolio-section h1 {
-            font-size: 36px;
-            margin-bottom: 40px;
-            color: #333;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .portfolio-item {
-            background-color: #fcfcff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .portfolio-item .content {
-            padding: 20px;
-        }
-
-        .portfolio-item h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .portfolio-item p {
-            font-size: 16px;
-            color: #777;
-        }
-
-        /* Video Container Styles */
-        .video-container {
-            width: 100%;
-            padding-top: 0%; /* This creates the square aspect ratio */
-            position: relative;
-        
-        }
-
-     
-
-        .video-container video {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            cursor: pointer; /* Cursor changes to pointer indicating it's clickable */
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #000000;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .footer-content {
-            margin-bottom: 20px;
-        }
-
-        .footer-content h3 {
-            margin: 0;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .footer-content p {
-            margin: 0;
-            font-size: 1em;
-        }
-
-        .socials {
-            list-style: none;
-            padding: 0;
-        }
-
-        .socials li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .socials a img {
-            width: 32px;
-            height: 32px;
-            transition: transform 0.3s ease;
-        }
-
-        socials a img:hover {
-            transform: scale(1.2);
-        }
-
-        .footer-bottom {
-            background-color: #8a80c4;
-            padding: 10px 0;
-            font-size: 0.9em;
-            margin-top: 20px;
-        }
-
-        .footer-bottom p {
-            margin: 0;
-        }
-
-        .about-section {
-            padding: 50px 20px;
-            background-color: #7683c8;
-            text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-section h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #eaeaf1;
-        }
-
-        .about-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #eaeaf1;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+</head>
 
 
-        .about-section p {
-            font-size: 18px;
-            color: #f8f5f5;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
 
-        .about-section .card {
-            background-color: #3f0e02;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(232, 230, 230, 0.958);
-            padding: 20px;
-            text-align: left;
-            margin: 0 auto;
-            max-width: 400px;
-        }
+  <a class="menu-btn"><span></span></a>
 
-        .about-section .card .logo10 {
-            width: 40%;
-        }
-    </style>
-<body>
-    <!-- Hero Section -->
-    <div class="hero">
-        <nav>
-            <img src="images/logoe.png" class="logo" alt="Logo">
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#portfolio">PORTFOLIO</a></li>
+  <div class="container-fluid overflow-hidden">
+
+    <header id="header-nav" class="col-lg-2 position-fixed px-5 bg-white h-100">
+      <div class="header-wrap d-flex flex-column justify-content-between h-100">
+        <div class="navigation">
+          <div class="site-logo mt-5">
+            
+          </div>
+
+          <nav id="one-page-menu" class="vertical-menu my-5">
+            <ul class="menu-list list-unstyled">
+              <li><a href="#home" class="nav-link">Home</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#experience" class="nav-link">Experience</a></li>
+              <li><a href="#portfolio" class="nav-link">Works</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+              
+              
             </ul>
-        </nav>
-
-        <!-- CV Download Section -->
-    <div class="das">
-        <a href="images/Elsa_Luis_CV.docx" class="download-btn">DOWNLOAD CV</a>
-    </div>
-
-     <!-- About Section -->
-<div id="about" class="about-section">
-    <h1>About Me</h1>
-    <p>With a strong foundation in computer science and a passion for technology, I am a dedicated programmer currently pursuing a master's degree in artificial intelligence. My academic journey has equipped me with a deep understanding of both theoretical and practical aspects of software development, and I am constantly expanding my knowledge in cutting-edge AI technologies.</p>
-    <p>I have a keen interest in developing innovative solutions that merge creativity with technical expertise, and I am eager to contribute to projects that have a meaningful impact. My approach is centered around problem-solving, continuous learning, and collaboration, as I strive to stay at the forefront of the rapidly evolving tech landscape.</p>
-    <div class="row">
-        <div class="column">
-            <div class="card">
-                <img src="images/ELSAA.jpg" class="logo10" alt="Logo10">
-                <div class="container">
-                    <h2>Elsa Luis</h2>
-                    <p class="title">Computer Programmer & AI Enthusiast</p>
-                    <p>Email: elsamonicatreze@gmail.com</p>
-                </div>
-            </div>
+          </nav>
         </div>
-    </div>
-</div>
+       
+      </div>
+    </header>
 
+    <main class="col-lg-10 offset-lg-2">
+      <div class="container">
 
+        <div class="justify-content-center px-1 mx-1 px-xl-5 mx-xl-5">
+
+          <section id="home" class="py-5 bg-text" data-text="01">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="banner-image text-center" data-aos="fade-right">
+                  <img src="images/banner-image.png" alt="banner" class="img-fluid" class="img-fluid">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="name1" data-aos="fade-in">
+                  <span class="name1"> Developer</span>
+                  <h1 class="banner">Elsa Luis</h1>
+                </div>
+              </div>
+            </div>
+
+              </div>
+              <div class="col-lg-3">
+                <a href="#portfolio" class="btn btn-dark text-uppercase py-4 px-5" data-aos="fade-up" data-aos-delay="300">View All Work</a>
+              </div>
+            </div>
+          </section>
+
+          <section id="about" class="my-5 py-5 bg-text" data-text="02">
+            <div class="row d-flex flex-wrap" data-aos="fade-up">
+              <div class="col-lg-6 pb-5">
+             
+                <h2 class="display-4 txt-fx slide-up">Education</h2>
+                <div class="data-info py-3" data-aos="fade-up">
+                  <span class="meta-date">2020 - 2024</span>
+                  <h3 class="info-title">Bachelors in Computer Science</h3>
+                </div>
+                <div class="data-info" data-aos="fade-up" data-aos-delay="100">
+                  <span class="meta-date">2024-2025</span>
+                  <h3 class="info-title">Masters in Artifical Intelligence</h3>
+              
+                </div>
+              </div>
+              <div class="experience">
+                <h2 class="text">Experiences</h2>
+                <div class="data-info py-3" data-aos="fade-up" data-aos-delay="200">
+                  <span class="meta-date">2024-</span>
+                  <h3 class="info-title">Web designer</h3>
+                  <p>Web designer for clothing shop</p>
+                </div>
+              
+              </div>
+            </div>
+            <div class="row d-flex flex-wrap" data-aos="fade-up">
+              <div class="col-lg-6 pb-5">
+                <h2 class="display-4 txt-fx slide-up">Interests</h2>
+                <div class="data-info py-3" data-aos="fade-up">
         
-    </div>
-
-    
-
-
-    <!-- Portfolio Section -->
-    <div id="portfolio" class="portfolio-section">
-        <h1>My Projects</h1>
-        <div class="portfolio-grid">
-            <!-- Project 1 -->
-            <div class="portfolio-item">
-                <div class="video-container">
-                    <video controls>
-                        <source src="images/memory game.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                  <p>Football, PyTorch, Deep Learning, Java, mobile development, Natural language processing, Matlab, video, swimming.</p>
                 </div>
-                <div class="content">
-                    <h3>Memory game</h3>
-                    <p>Designed using CSS, HTML, and JavaScript</p>
-                </div>
+                
             </div>
-            
-            <!-- Project 2 -->
-            <div class="portfolio-item">
-                <div class="video-container">
-                    <video controls>
-                        <source src="images/op.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="content">
-                    <h3>Mobile Fitness app</h3>
-                    <p>Designed using Kotlin</p>
-                </div>
-            </div>
+          </section>
 
-            <!-- Additional Projects -->
-            
-
-    
+          
             </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="info-element py-4" data-aos="fade-up">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th>Age</th>
+                        <td>24</td>
+                      </tr>
+                      <tr>
+                        <th>Residence</th>
+                        <td>England</td>
+                      </tr>
+                    
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="skill-chart py-4" data-aos="fade-up">
+                  <ul class="skill-chart-list list-unstyled">
+                    <li>
+                      <div class="chart-header d-flex justify-content-between">
+                        <span class="skill-title">Python</span>
+                        <span class="percentage">80%</span>
+                      </div>
+                      <div class="chart-border">
+                        <div class="chart-percentage eighty-percent"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="chart-header d-flex justify-content-between">
+                        <span class="skill-title">Matlab</span>
+                        <span class="percentage">65%</span>
+                      </div>
+                      <div class="chart-border">
+                        <div class="chart-percentage sixty-percent"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="chart-header d-flex justify-content-between">
+                        <span class="skill-title">Java</span>
+                        <span class="percentage"70%</span>
+                      </div>
+                      <div class="chart-border">
+                        <div class="chart-percentage seventy-percent"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="chart-header d-flex justify-content-between">
+                        <span class="skill-title">Pytorch</span>
+                        <span class="percentage">80%</span>
+                      </div>
+                      <div class="chart-border">
+                        <div class="chart-percentage eighty-percent"></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="chart-header d-flex justify-content-between">
+                        <span class="skill-title">HTML, CSS, JAVACRIPT</span>
+                        <span class="percentage">50%</span>
+                      </div>
+                      <div class="chart-border">
+                        <div class="chart-percentage fifty-percent"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          
+         
+<!-- Portfolio Section -->
+<div id="portfolio" class="portfolio-section">
+  <h1>My Projects</h1>
+  <div class="portfolio-grid">
+      <!-- Project 1 -->
+      <div class="portfolio-item">
+          <div class="video-container">
+              <video controls>
+                  <source src="images/memory game.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          <div class="content">
+              <h3>Memory game</h3>
+              <p>Designed using CSS, HTML, and JavaScript</p>
+          </div>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="portfolio-item">
+          <div class="video-container">
+              <video controls>
+                  <source src="images/op.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+          <div class="content">
+              <h3>Mobile Fitness app</h3>
+              <p>Designed using Kotlin</p>
+          </div>
+      </div>
+
+      <!-- Additional Projects -->
+      
+
+
+      </div>
+  </div>
+</div>
         </div>
-    </div>
 
-    <!-- Footer Section -->
-    <footer>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+
+
+  <footer>
         <div class="footer-content">
-            <h3>Contact Me</h3>
+            <h4>Contact Me</h4>
             <p>Feel free to reach out through my social media channels</p>
             <ul class="socials">
                 <li><a href="https://www.linkedin.com/in/elsa-luis-4729b9223/"><img src="images/174857.png" alt="LinkedIn"></a></li>
@@ -357,5 +257,7 @@
             <p>&copy; 2024 Elsa Luis | All Rights Reserved</p>
         </div>
     </footer>
+
 </body>
+
 </html>
